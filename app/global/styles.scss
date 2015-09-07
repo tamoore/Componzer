@@ -1,0 +1,16 @@
+@import './variables';
+@include guss-webfonts();
+
+body {
+  margin: 0;
+  font-family: map_get($fonts-map, GuardianTextEgyptianWeb);
+}
+
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+
+}
+

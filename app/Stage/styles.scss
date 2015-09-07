@@ -1,0 +1,7 @@
+@import '../global/variables';
+
+.stage {
+  flex-grow: 1;
+  background-color: map_get($pasteup-palette, neutral-8);
+  display: flex;
+}

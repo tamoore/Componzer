@@ -1,0 +1,9 @@
+{
+  "name": "Stage",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./index.js",
+  "dependencies": {
+    "SideNav" : "@component"
+  }
+}

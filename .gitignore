@@ -1,0 +1,39 @@
+*.pyc
+
+# temp files
+tmp
+log
+
+# dependency management
+.bundle
+vendor/bundle
+/node_modules/
+npm-debug.log
+
+# developer environment
+.idea
+.idea/*
+.DS_Store
+atlassian-ide-plugin.xml
+.rakeTasks
+.generators
+
+# CA files
+etc/ca/**/newcerts
+etc/ca/**/devices
+etc/ca/**/index.txt*
+etc/ca/**/serial*
+
+# built files
+public
+lib/GeoIPASNum.dat
+lib/GeoIPCity.dat
+lib/worldcitiespop.pgdump
+lib/sigs.json
+lib/references.json
+dist/
+
+# test files
+reports
+/db/*.sqlite3
+/db/*.sqlite3-journal

@@ -1,0 +1,15 @@
+@import '~guss-webfonts/src/_webfonts';
+@import '~pasteup-palette/src/_palette';
+
+$guss-webfonts-base-url: 'guss-webfonts/';
+$guss-webfonts-version: 'webfonts';
+
+$red: red;
+
+$fonts-map: (
+  GuardianSansWeb: 'Guardian Sans Web',
+  GuardianTextSansWeb : 'Guardian Text Sans Web',
+  GuardianAgateSans1Web: 'Guardian Agate Sans 1 Web',
+  GuardianEgyptianWeb: 'Guardian Egyptian Web',
+  GuardianTextEgyptianWeb: 'Guardian Text Egyptian Web'
+);
