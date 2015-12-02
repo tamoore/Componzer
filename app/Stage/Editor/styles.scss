@@ -1,0 +1,9 @@
+@import '../../global/variables';
+
+
+.container {
+  flex-grow: 1;
+  min-width: 200px;
+  background-color: white;
+  padding: 2rem 10rem;
+}

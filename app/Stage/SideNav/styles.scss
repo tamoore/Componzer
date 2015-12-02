@@ -1,0 +1,9 @@
+@import '../../global/variables';
+
+.container {
+  flex-grow: 1;
+  background-color: map_get($pasteup-palette, neutral-8);
+  min-width: 15rem;
+  max-width: 15rem;
+  border-right: 1px solid map_get($pasteup-palette, neutral-6);
+}

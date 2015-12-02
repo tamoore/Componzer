@@ -25,7 +25,8 @@
     "sass-loader": "^3.1.2",
     "style-loader": "^0.13.0",
     "webpack": "^1.12.9",
-    "webpack-dev-server": "^1.14.0"
+    "webpack-dev-server": "^1.14.0",
+    "node-bourbon": "^4.2.1-beta1"
   },
   "napa": {
     "pasteup-palette": "guardian/pasteup-palette",
@@ -33,6 +34,7 @@
   },
   "dependencies": {
     "react": "^0.14.3",
-    "react-dom": "^0.14.3"
+    "react-dom": "^0.14.3",
+    "sir-trevor": "toddmoorega/sir-trevor-js#next"
   }
 }

@@ -1,0 +1,9 @@
+{
+  "name": "Editor",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./index.js",
+  "dependencies": {
+    "sir-trevor": "^0.5.0"
+  }
+}

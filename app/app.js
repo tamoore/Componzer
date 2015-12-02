@@ -8,7 +8,7 @@ const App = React.createClass({
   render(){
     return (
       <div className={globalStyles.container}>
-        <Header name="World" />
+        <Header />
         <Stage />
       </div>
     );
