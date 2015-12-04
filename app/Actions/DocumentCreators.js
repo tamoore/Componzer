@@ -1,6 +1,10 @@
 import {AWSSetup, DynamoDB, Lambda} from './AWSWrapper.js';
 
-const AWS = AWSSetup('us-east-1')('AKIAITOVUAFQCD6FXLZQ')('dmroAG3I4TDtxhcKT0TY+jB5mtbLEn3Zy3LvzabW');
+
+const AWS = AWSSetup('us-east-1')('AKIAITOVUAFQCD6FXLZQ')
+                                  ('dmroAG3I4TDtxhcKT0TY+jB5mtbLEn3Zy3LvzabW');
+
+// TODO: add cognito
 
 export const updateDocument = (id = '', data = {}) => dispatch => {
   const params = {FunctionName: 'hellowWorldLamba'};

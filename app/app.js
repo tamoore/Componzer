@@ -3,11 +3,7 @@ import ReactDOM from 'react-dom';
 import Header from './Components/Header';
 import Stage from './Components/Stage';
 import globalStyles from './global/styles.scss';
-
-import * as ActionsCreator from './Actions/DocumentCreators.js';
 import {storeInstance} from './Store/Store.js';
-
-storeInstance.dispatch(ActionsCreator.getDocument('2'));
 
 const App = React.createClass({
   render(){
@@ -22,10 +18,11 @@ const App = React.createClass({
 
 const render = () => {
   ReactDOM.render(
-    <App data={storeInstance.getState()}   />,
+    <App data={storeInstance.getState()}  />,
     document.getElementById('app')
   );
 };
 
 storeInstance.subscribe(render);
+render();
 

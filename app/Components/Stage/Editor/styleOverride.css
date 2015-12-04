@@ -60,3 +60,7 @@
 .st-block-addition__button {
   border-radius: 50%;
 }
+
+.js-cite-input {
+  margin-bottom: 1.5rem !important; /* TODO: remove this */
+}

@@ -6,7 +6,7 @@ export default React.createClass({
   render(){
     return (
       <header className={styles.header}>
-        <Logo name="Componentr" />
+        <Logo name="&nbsp;&nbsp;Componzer" />
       </header>
     );
   }

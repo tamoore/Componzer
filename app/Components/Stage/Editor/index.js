@@ -5,11 +5,15 @@ import 'style!css!../../../../node_modules/sir-trevor/build/sir-trevor.css';
 import 'style!css!./styleOverride.css'; // TODO: bring this into sir-trevor itself
 import SirTrevor from 'sir-trevor';
 import debounce from 'debounce';
-import * as ActionsCreator from '../../../Actions/DocumentCreators.js';
-import {storeInstance} from '../../../Store/Store.js';
+
+const renderTextArea = data =>
+  <textarea ref="editor" className="js-st-instance" defaultValue={data}></textarea>
 
 export default React.createClass({
-
+  propTypes: {
+    id: React.PropTypes.string.isRequired,
+    updateDocument: React.PropTypes.func.isRequired
+  },
 
   componentDidMount(){
     this.editor = new SirTrevor.Editor({
@@ -26,10 +30,10 @@ export default React.createClass({
 
 
   handleSirTrevorUpdate(){
-    const id = "2";
     SirTrevor.onBeforeSubmit();
     const data = this.editor.store.retrieve();
-    storeInstance.dispatch(ActionsCreator.updateDocument(id, data));
+    this.props.updateDocument(this.props.id, data);
+
   },
 
 
@@ -43,13 +47,12 @@ export default React.createClass({
 
 
   render() {
-
     const data = this.props.data ?
       JSON.stringify({data: this.props.data.document.content }) : JSON.stringify({data: []});
     return (
       <div className={styles.container}>
         <form>
-          <textarea ref="editor" className="js-st-instance" defaultValue={data}></textarea>
+          {(renderTextArea(data))}
         </form>
       </div>
     );
