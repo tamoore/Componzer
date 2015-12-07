@@ -1,5 +1,5 @@
 # Componzer
-A prototype of how to create a component CMS using AWS Lambda func, DynamoDB , NodeJS, ReactJS and Redux
+A prototype of how to create a component CMS using AWS Lambda, DynamoDB, Node, React, Redux, Scribe and Sir Trevor
 
 ### Install
 `npm install`
@@ -7,4 +7,4 @@ A prototype of how to create a component CMS using AWS Lambda func, DynamoDB , N
 ### Dev Server
 `npm run server`
 
-Open `localhost:8080`
+Open `localhost:8080
