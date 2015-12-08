@@ -2,7 +2,6 @@ import {AWSSetup, DynamoDB, Lambda} from './AWSWrapper.js';
 
 const AWS = AWSSetup('us-east-1')('us-east-1:5be8034c-1dd5-4486-baba-04c30e2d6789');
 
-
 // TODO: add cognito
 
 export const updateDocument = (id = '', data = {}) => dispatch => {

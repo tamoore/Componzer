@@ -18,7 +18,7 @@ export default React.createClass({
   componentDidMount(){
     this.editor = new SirTrevor.Editor({
       el: ReactDOM.findDOMNode(this.refs.editor),
-      blockTypes: ['Text', 'Heading', 'List', 'Quote']
+      blockTypes: ['Text', 'Heading', 'List', 'Quote', 'Video', 'Tweet', 'Chart']
     });
 
     SirTrevor.EventBus.on('block:content:update', debounce(this.handleSirTrevorUpdate, 500));
