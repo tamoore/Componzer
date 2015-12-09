@@ -21,8 +21,7 @@ export default React.createClass({
   },
   render(){
     const {children: render} = this.props;
-    const props = this.props;
-    return render({id: id, ...props}); //TODO: will no longer need this with context object
+    return render(id);
   }
 });
 

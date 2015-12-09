@@ -7,22 +7,38 @@ import {storeInstance} from './Store/Store.js';
 
 const App = React.createClass({
   render(){
+
     return (
       <div className={globalStyles.container}>
         <Header />
-        <Stage {...this.props} />
+        <Stage  />
       </div>
     );
   }
 });
 
+const Provider = React.createClass({
+  childContextTypes: {
+    store: React.PropTypes.object
+  },
+  getChildContext(){
+    return {
+      store: this.props.store
+    }
+  },
+  render(){
+    return this.props.children;
+  }
+});
+
+
 const render = () => {
   ReactDOM.render(
-    <App data={storeInstance.getState()}  />,
+    <Provider store={storeInstance}>
+      <App />
+    </Provider>,
     document.getElementById('app')
   );
 };
-
-storeInstance.subscribe(render);
 render();
 

@@ -9,7 +9,7 @@ export const updateDocument = (id = '', data = {}) => dispatch => {
   params.Payload = JSON.stringify({id: id,  data});
   AWS.Lambda.invoke(params, (err, data)=>{
     dispatch({
-      type: 'RES_DOCUMENT',
+      type: 'REQ_DOCUMENT_UPDATE',
       id,
       data: data.Payload
     });

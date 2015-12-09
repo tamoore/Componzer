@@ -3,23 +3,38 @@ import styles from './styles.scss';
 import SideNav from './SideNav';
 import Editor from './Editor';
 import Container from '../Containers/EditorContainer.js';
-import {storeInstance} from '../../Store/Store.js';
 import * as ActionsCreator from '../../Actions/DocumentCreators.js';
 
 
 export default React.createClass({
-  handleDocumentUpdate(id, data){
-    storeInstance.dispatch(ActionsCreator.updateDocument(id, data));
+  contextTypes: {
+    store: React.PropTypes.object
   },
-
+  getInitialState(){
+    return {
+      document: null
+    }
+  },
+  handleDocumentUpdate(id, data){
+    this.context.store.dispatch(ActionsCreator.updateDocument(id, data));
+  },
+  componentDidMount(){
+    this.context.store.subscribe(this.onChange)
+  },
+  onChange(){
+    const {document} = this.context.store.getState();
+    this.setState({
+      document
+    })
+  },
   render(){
     return (
       <div className={styles.stage}>
         <SideNav />
         <Container>
-          {(({data, id}) => id ?
-            <Editor {...this.props} id={id} updateDocument={this.handleDocumentUpdate} /> : null
-
+          {(id => id ?
+            <Editor id={id} data={this.state.document}
+              updateDocument={this.handleDocumentUpdate} /> : null
           )}
         </Container>
       </div>

@@ -10,6 +10,9 @@ const renderTextArea = data =>
   <textarea ref="editor" className="js-st-instance" defaultValue={data}></textarea>
 
 export default React.createClass({
+  contextTypes: {
+    data: React.PropTypes.arrayOf(React.PropTypes.object)
+  },
   propTypes: {
     id: React.PropTypes.string.isRequired,
     updateDocument: React.PropTypes.func.isRequired
@@ -48,7 +51,7 @@ export default React.createClass({
 
   render() {
     const data = this.props.data ?
-      JSON.stringify({data: this.props.data.document.content }) : JSON.stringify({data: []});
+      JSON.stringify({ data: this.props.data.content }) : JSON.stringify({data: []});
     return (
       <div className={styles.container}>
         <form>
